@@ -9,6 +9,6 @@ Here are some example outputs:
 
 Here, we have three particle trajectories in a constant magnetic field. The black trajectory is a particle traveling wholly perpendicular to the magnetic field—its path is a circle, as expected. The red path is a particle with velocity components both parallel to and perpendicular to the field, resulting in a helix—it also has a greater mass, which results in a wider curvature of path. The blue line is a particle traveling completely parallel to the force—its motion is not affected at all.
 
-With a wacky, arbitrary, physically implausible B field (b = np.array([2, 0, .1*z]), we get something sillier:
+With a wacky, arbitrary, physically implausible B field (`b = np.array([2, 0, .1*z]`), we get something sillier:
 ![Figure 2](catherinemoresco.github.com/lorentz-force/readme-assets/figure_2.png)
 
