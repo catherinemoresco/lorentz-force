@@ -16,3 +16,6 @@ With a wackier, arbitrary B field (`b = np.array([2, 0, .1*z]`), we get somethin
 ### E Fields
 The fun doesn't stop there...we can handle E fields too! Take a look at the next example, with a constant E field. Note the blue path, a particle that starts at rest, approximates cycloid motion! Cycloids are really, really cool for a lot of reasons (they're solutions to both the tautochrone and brachistochrone problems! I'm so excited!).
 ![Figure 3](https://raw.githubusercontent.com/catherinemoresco/lorentz-force/master/readme-assets/figure_3.png)
+
+## LET'S GET CRAZY
+![Figure 4](https://raw.githubusercontent.com/catherinemoresco/lorentz-force/master/readme-assets/figure_4.png)
