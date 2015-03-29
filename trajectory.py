@@ -4,6 +4,7 @@
 from mpl_toolkits.mplot3d import axes3d
 import numpy as np 
 import matplotlib.pyplot as plt
+import math
 
 # THIS IS THE PART WHERE YOU MODIFY THE PARAMETERS # ====================================================================================
 # =======================================================================================================================================
@@ -20,7 +21,7 @@ numTrajectories = 3 # Number of trajectories that you want to plot
 
 masses = [.05, .075, .075] # Two numbers, representing trajectories
 positions = [[0., 0., 0.], [0., 0., 0], [1.,  1.,  0.]] # An array of 3-vectors representing startig position
-velocities = [[1., 0., 0.], [1., 1., .1], [0., 0., 0.]] # An array of 3-vectors representing velocities
+velocities = [[1., 0., 0.], [1., 2., .1], [0., 0., 0.]] # An array of 3-vectors representing velocities
 charges = [1, 1, 1]
 formatStrings = ["k", "r", "b"] # Standard pyplot formatting strings for each trajectory plot
 
@@ -31,8 +32,8 @@ formatStrings = ["k", "r", "b"] # Standard pyplot formatting strings for each tr
 # This can also be combated by using an alternate numerical integration method, such as Runge Kutta; however, 
 # since here we are calculating relatively few and short paths, it is sufficient to use Euler with appropriately small steps.
 # Just make your timestep small relative to your speed, and you'll be fine.
-timestep = .0001
-numsteps = 100000 # This will process in a reasonable amount of time.
+timestep = .001
+numsteps = 10000 # This will process in a reasonable amount of time.
 
 # This is where you define your B field. Pick a function, any function!
 def b(x, y, z):
@@ -48,7 +49,7 @@ def b(x, y, z):
 def e(x, y, z):
   ''' What the E field evaluates to at a given x, y, z, location. 
   Returns E as a vector. '''  
-  e = np.array([0, .1, 0])
+  e = np.array([math.sin(x), .1, math.sin(z)])
   return e
 
 # =======================================================================================================================================
