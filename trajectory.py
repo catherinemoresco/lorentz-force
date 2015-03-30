@@ -20,10 +20,10 @@ import math
 numTrajectories = 3 # Number of trajectories that you want to plot
 
 masses = [.05, .075, .075] # Two numbers, representing trajectories
-positions = [[0., 0., 0.], [0., 0., 0], [1.,  1.,  0.]] # An array of 3-vectors representing startig position
-velocities = [[1., 0., 0.], [1., 2., .1], [0., 0., 0.]] # An array of 3-vectors representing velocities
-charges = [1, 1, 1]
-formatStrings = ["k", "r", "b"] # Standard pyplot formatting strings for each trajectory plot
+positions = [[0., -5., 0.], [0., 0., 0], [0.,  5.,  0.]] # An array of 3-vectors representing startig position
+velocities = [[.01, 0., 100.], [-.01, 0., 100.], [0., 0., 100.]] # An array of 3-vectors representing velocities
+charges = [1, 2, 1]
+formatStrings = ["k", "r", "b-"] # Standard pyplot formatting strings for each trajectory plot
 
 # A note about time: 
 # The smaller your steps are, the more precise your result will be. 
@@ -33,14 +33,14 @@ formatStrings = ["k", "r", "b"] # Standard pyplot formatting strings for each tr
 # since here we are calculating relatively few and short paths, it is sufficient to use Euler with appropriately small steps.
 # Just make your timestep small relative to your speed, and you'll be fine.
 timestep = .001
-numsteps = 10000 # This will process in a reasonable amount of time.
+numsteps = 100000 # This will process in a reasonable amount of time.
 
 # This is where you define your B field. Pick a function, any function!
 def b(x, y, z):
   ''' What the B field evaluates to at a given x, y, z, location. 
   Returns B as a vector. '''
   # For now, let's make it a constant B field in the z direction.
-  b = np.array([0, 0, .1])
+  b = np.array([0, 0, 0])
   # Here's one that varies a little bit:
   # b = np.array([2, 0, .1*z])
   return b
@@ -49,7 +49,7 @@ def b(x, y, z):
 def e(x, y, z):
   ''' What the E field evaluates to at a given x, y, z, location. 
   Returns E as a vector. '''  
-  e = np.array([math.sin(x), .1, math.sin(z)])
+  e = np.array([-x*.001, 0, 0])
   return e
 
 # =======================================================================================================================================

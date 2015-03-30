@@ -19,3 +19,13 @@ The fun doesn't stop there...we can handle E fields too! Take a look at the next
 
 ## LET'S GET CRAZY
 ![Figure 4](https://raw.githubusercontent.com/catherinemoresco/lorentz-force/master/readme-assets/figure_4.png)
+We added a point charge here, which doesn't actually exert enough force to do anything *too* funky, except for the weird loop that the start of the red trajectory.
+
+![Figure 5](https://raw.githubusercontent.com/catherinemoresco/lorentz-force/master/readme-assets/figure_5.png)
+What happens if you use an E field of the form of a sin function? This. This happens.
+
+![Figure 6](https://raw.githubusercontent.com/catherinemoresco/lorentz-force/master/readme-assets/figure_6.png)
+Now I'm just honestly messing around. But I'm having a good time.
+
+![Figure 7](https://raw.githubusercontent.com/catherinemoresco/lorentz-force/master/readme-assets/figure_7.png)
+This is the same thing as last time, but I let it run for ten times as long. *Woooooooah*.
